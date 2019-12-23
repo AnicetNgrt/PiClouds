@@ -158,13 +158,8 @@ function update() {
 
 
 </head>
-<body style="
-background-color: rgb(67,169,223);
-">
-
-
-
-<div id="game" style="
+<body style="background-color: rgb(67,169,223);">
+	<div id="game" style="
 		cursor: none;
 		position: absolute;
 		TOP: 0px;
@@ -178,94 +173,6 @@ background-color: rgb(67,169,223);
 		image-rendering: optimize-contrast;
 		-ms-interpolation-mode: nearest-neighbor;
 		image-rendering : pixelated;">
-    </div>
-		<div style="
-		position: absolute;
-		TOP: 710px;
-		LEFT: 8px;">
-		<p><span style="font-size: 10pt; font-family: verdana, geneva; color: #ffffff;">Fonctionne mieux avec Firefox ou Google Chrome</span></p>
-		</div>
-<div style="
-		position: absolute;
-		TOP: 750px;
-		LEFT: 8	px;">
-		<p><span style="font-size: 20pt; color: #ffffff; font-family: verdana, geneva;"><strong>Les nuages de Pi</strong></span></p>
-<p><span style="font-size: 18pt; font-family: verdana, geneva; color: #ffffff;">Cette repr&eacute;sentation des nuages en mouvement n'est pas r&eacute;gie par des param&egrave;tres m&eacute;t&eacute;orologiques complexes.</span></p>
-<p><span style="font-size: 18pt; font-family: verdana, geneva; color: #ffffff;">Chaque &eacute;ni&egrave;me d&eacute;cimale de Pi d&eacute;finit sur une &eacute;chelle de 1 &agrave; 10 la proximit&eacute; de L'&eacute;ni&egrave;me nuage par rapport &agrave; l'observateur.</span></p>
-<p><span style="font-size: 18pt; font-family: verdana, geneva; color: #ffffff;">Entre l'impr&eacute;visible nature et le d&eacute;terminisme machinal, naviguez sur cette mer de nuages num&eacute;riques au rythme de pi...</span></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p style="text-align: left;"><span style="color: #ffffff; font-family: verdana, geneva; font-size: 11pt;"><strong><span style="">Pour aller plus loin... :</span></strong></span></p>
-<p style="text-align: left;"><span style="color: #ffffff;"><strong><span style="font-family: verdana, geneva; font-size: 11pt;"><span style=""><span style="text-decoration: underline;">Quelques d&eacute;finitions :</span></span></span></strong></span></p>
-<p style="text-align: left;"><span style="color: #ffffff; font-family: verdana, geneva; font-size: 11pt;"><span style=""><strong>(une)d&eacute;cimale</strong> : chiffre plac&eacute; &agrave; droite de la virgule. Peut &ecirc;tre pr&eacute;c&eacute;d&eacute; d'un nombre indiquant son rang (=la distance &agrave; la virgule).<br /></span></span></p>
-<p style="text-align: left;"><span style="color: #ffffff; font-family: verdana, geneva; font-size: 11pt;"><span style=""><em><span style="text-decoration: underline;"><span>Exemples</span></span> : La premi&egrave;re d&eacute;cimale de&nbsp; 1,7 est 7 ; La 6e d&eacute;cimale de 1,872519 est 9</em></span></span></p>
-<p style="text-align: left;"><span style="color: #ffffff;"><strong><span style="font-family: verdana, geneva; font-size: 11pt;"><span style="">Pi </span></span></strong><span style="font-family: verdana, geneva; font-size: 11pt;"><span style="">: Pi est un nombre d&eacute;cimal (ayant une ou plusieurs d&eacute;cimales) dont la valeur exacte est, &agrave; ce jour, inconnue. En effet, il semble que l'on puisse toujours la mesurer avec plus de pr&eacute;cision, sans que jamais l'on puisse atteindre sa derni&egrave;re d&eacute;cimale. </span></span></span></p>
-<p style="text-align: left;"><span style="color: #ffffff; font-family: verdana, geneva; font-size: 11pt;"><span style=""><em>Valeur approch&eacute;e de Pi &agrave; la 6e d&eacute;cimale : 3,141592</em><br /></span></span></p>
-<p style="text-align: left;"><span style="color: #ffffff;"><strong><span style="font-family: verdana, geneva; font-size: 11pt;"><span style="">Algorithme </span></span></strong><span style="font-family: verdana, geneva; font-size: 11pt;"><span style="">: Suite d'instructions (ici ex&eacute;cut&eacute;e par un ordinateur) et qui prend g&eacute;n&eacute;ralement des valeurs en entr&eacute;e(texte, nombre, choix...) pour donner d'autres valeurs en sortie.<br /></span></span></span></p>
-<p style="text-align: left;">&nbsp;</p>
-<p style="text-align: left;"><span style="color: #ffffff;"><strong><span style="font-size: 11pt; font-family: verdana, geneva; "><span style="text-decoration: underline;">Principe de fonctionnement de l'algorithme de la simulation:</span></span></strong></span></p>
-<p style="text-align: left;"><span style="color: #ffffff;">L'algorithme fait apparaitre les nuages un par un, et compte constamment le nombre de nuage qu'il a d&eacute;j&agrave; fait apparaitre, de mani&egrave;re &agrave; connaitre le rang de chaque nuage. <em>(premier nuage : rang 1, deuxi&egrave;me nuage : rang 2, troisi&egrave;me nuage : rang 3... et ainsi de suite)</em></span></p>
-<p style="text-align: left;"><span style="color: #ffffff;">L'algorithme met en relation le nuage de l'&eacute;ni&egrave;me rang avec la d&eacute;cimale de pi de l'&eacute;ni&egrave;me rang. La valeur de cette &eacute;ni&egrave;me d&eacute;cimale d&eacute;finit sur une &eacute;chelle de 0 &agrave; 9 la proximit&eacute; par rapport &agrave; l'observateur du nuage correspondant. <em>(en effet, une d&eacute;cimale a toujours une valeur entre 0 et 9) </em></span></p>
-<p style="text-align: left;"><span style="color: #ffffff;">Or, cette simulation n'est pas en 3 dimensions, donc la notion de "distance par rapport &agrave; l'observateur" <em>(plus commun&eacute;ment appel&eacute;e "profondeur")</em> n'est pas exploitable en soit. Il faut donner une illusion de profondeur, de perspective. Pour cela, l'on utilise quatre r&egrave;gles :</span></p>
-<ol>
-<li style="text-align: left;"><span style="color: #ffffff;">plus le nuage est "lointain", plus il doit apparaitre petit, plus il est "proche" plus il doit apparaitre grand.</span></li>
-<li style="text-align: left;"><span style="color: #ffffff;">plus le nuage est "lointain", moins il est rapide, en effet, avec la perspective, son parcours visible &agrave; l'&eacute;cran sera plus long.</span></li>
-<li style="text-align: left;"><span style="color: #ffffff;">Il y a 10 seuils de "proximit&eacute;". Plus le seuil est loin de l'observateur, plus il apparait proche du sol &agrave; l'&eacute;cran, de mani&egrave;re &agrave; respecter l'angle de camera de dessous.</span></li>
-<li style="text-align: left;"><span style="color: #ffffff;">La distance des seuils au sol se tassent proportionnellement &agrave; leur distance &agrave; l'observateur pour renforcer l'impression de perspective</span></li>
-</ol>
-<p><span style="color: #ffffff;">Le reflet sur l'eau est en fait un sym&eacute;trique de l'image du dessus, par rapport &agrave; la ligne de perspective. C'est un effet que l'ordinateur peut effectuer assez nativement. La couleur de la partie basse est un d&eacute;grad&eacute; de bleu semi-opaque, et plac&eacute; par dessus l'image en sym&eacute;trique, de mani&egrave;re &agrave; donner l'illusion d'une mer calme.</span></p>
-<p><span style="color: #ffffff;">Pour r&eacute;capituler :</span></p>
-<table style="border-collapse: collapse; width: 95.9444%; height: 211px;" border="1">
-<tbody>
-<tr style="height: 18px;">
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">rang du nuage</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">nuage 1</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">nuage 2</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">nuage 3</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">nuage 5</span></td>
-</tr>
-<tr style="height: 18px;">
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">d&eacute;cimale de Pi</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;1</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;4</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;1</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">9</span></td>
-</tr>
-<tr style="height: 18px;">
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">distance th&eacute;orique</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;tr&egrave;s proche</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;moyenne</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;tr&egrave;s proche</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;tr&egrave;s lointain</span></td>
-</tr>
-<tr style="height: 18px;">
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">taille &agrave; l'&eacute;cran</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;tr&egrave;s grande</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;moyenne</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;tr&egrave;s grande</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;tr&egrave;s petite</span></td>
-</tr>
-<tr style="height: 18px;">
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">vitesse &agrave; l'&eacute;cran</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;tr&egrave;s rapide</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">moyennement rapide</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;tr&egrave;s rapide</span></td>
-<td style="width: 14.2857%; height: 18px;"><span style="color: #ffffff;">&nbsp;tr&egrave;s lente</span></td>
-</tr>
-</tbody>
-</table>
-
-<p><span style="color: #ffffff;">Cependant, au bout du 800e nuage, l'algorithme arr&ecirc;te d'utiliser les d&eacute;cimales de pi, et choisit al&eacute;atoirement un chiffre entre 0 et 9 diff&eacute;rent pour chaque nuage de rang sup&eacute;rieur &agrave; 800. Ce choix refl&egrave;te une volont&eacute; de mettre en parall&egrave;le Pi et l'al&eacute;atoire math&eacute;matique absolu.</span></p>
-<p><span style="color: #ffffff;">En pratique, il semble que la simulation avec Pi et la simulation al&eacute;atoire, soient indiscernables, &agrave; moins de connaitre toutes les d&eacute;cimales de Pi par coeur.</span></p>
-<p>&nbsp;</p>
-<p>&nbsp;</p>
-<p style="text-align: left;">&nbsp;</p>
-<p style="text-align: left;">&nbsp;</p>
-<p>&nbsp;</p>
-
-		</div>
-
-	</img>
+	</div>
 </body>
 </html>
